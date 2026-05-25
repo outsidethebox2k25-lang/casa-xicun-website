@@ -83,12 +83,12 @@ export default async function RoomDetail({ params }: PageProps<'/[lang]/rooms/[s
 
         {/* Gallery */}
         <Reveal delay={0.1}>
-          <div className="mt-10 grid grid-cols-1 gap-2 md:grid-cols-4 md:grid-rows-2">
-            <div className="relative aspect-[4/3] overflow-hidden md:col-span-2 md:row-span-2 md:aspect-auto">
+          <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-4 md:grid-rows-2">
+            <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-auto">
               <Image src={room.gallery[0]} alt={c.name} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover editorial-img" />
             </div>
             {room.gallery.slice(1, 5).map((src) => (
-              <div key={src} className="relative aspect-[4/3] overflow-hidden">
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image src={src} alt="" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover editorial-img" />
               </div>
             ))}

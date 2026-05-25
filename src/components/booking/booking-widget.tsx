@@ -152,7 +152,8 @@ export function BookingWidget({ lang, labels, variant = 'hero' }: Props) {
           <Panel>
             <DayPicker
               mode="range"
-              numberOfMonths={typeof window !== 'undefined' && window.innerWidth >= 768 ? 2 : 1}
+              numberOfMonths={1}
+              className="md:[--rdp-cell-size:44px]"
               selected={range}
               onSelect={setRange}
               locale={dateLocale}
@@ -247,7 +248,7 @@ function Panel({ children }: { children: React.ReactNode }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -6 }}
       transition={{ duration: 0.2 }}
-      className="absolute inset-x-0 top-full z-40 mt-3 rounded-2xl rounded-xl border border-xicun-line bg-white p-5 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] lg:p-7"
+      className="absolute inset-x-0 top-full z-40 mt-3 max-h-[72vh] overflow-y-auto overflow-x-hidden rounded-2xl border border-xicun-line bg-white p-4 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] sm:p-5 lg:p-7"
     >
       {children}
     </motion.div>

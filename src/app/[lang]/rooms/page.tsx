@@ -39,9 +39,9 @@ export default async function RoomsPage({ params }: PageProps<'/[lang]/rooms'>) 
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12">
-          {/* Filters sidebar (desktop) */}
-          <aside className="lg:col-span-3">
-            <div className="border border-xicun-line p-6 lg:sticky lg:top-32">
+          {/* Filters sidebar (desktop only) */}
+          <aside className="hidden lg:col-span-3 lg:block">
+            <div className="rounded-2xl border border-xicun-line bg-white p-6 lg:sticky lg:top-32">
               <p className="text-[10px] uppercase tracking-editorial text-xicun-gold">
                 {dict.rooms.filters.title}
               </p>

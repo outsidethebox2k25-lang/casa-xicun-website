@@ -186,7 +186,7 @@ export function BookWizard({ lang, dict }: Props) {
         </p>
       </div>
 
-      <div className="mt-6 grid grid-cols-4 gap-2">
+      <div className="mt-6 grid grid-cols-4 gap-1 sm:gap-2">
         {stepTitles.map((t, i) => (
           <div key={t} className="flex flex-col gap-2">
             <span
@@ -195,11 +195,18 @@ export function BookWizard({ lang, dict }: Props) {
               }`}
             />
             <span
-              className={`text-[10px] uppercase tracking-editorial ${
+              className={`hidden text-[10px] uppercase tracking-editorial sm:block ${
                 i + 1 <= step ? 'text-xicun-black' : 'text-xicun-stone'
               }`}
             >
               {t}
+            </span>
+            <span
+              className={`text-[10px] font-semibold sm:hidden ${
+                i + 1 <= step ? 'text-xicun-gold' : 'text-xicun-stone'
+              }`}
+            >
+              {i + 1}
             </span>
           </div>
         ))}
@@ -261,10 +268,10 @@ export function BookWizard({ lang, dict }: Props) {
                   </div>
 
                   {(!range?.from || !range?.to || editingDates) ? (
-                    <div className="mt-3 border border-xicun-line p-4">
+                    <div className="mt-3 overflow-x-auto rounded-2xl border border-xicun-line p-3 sm:p-4">
                       <DayPicker
                         mode="range"
-                        numberOfMonths={2}
+                        numberOfMonths={typeof window !== 'undefined' && window.innerWidth >= 768 ? 2 : 1}
                         selected={range}
                         onSelect={(r) => {
                           setRange(r);
