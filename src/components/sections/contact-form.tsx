@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { Send } from 'lucide-react';
+import { Check, Loader2, Send } from 'lucide-react';
 import { Button } from '@/components/primitives/button';
 import { pushToGHL, readUTM } from '@/lib/ghl';
 
@@ -17,25 +17,35 @@ type Dict = {
 
 export function ContactForm({ dict }: { dict: Dict }) {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [d, setD] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await pushToGHL({
-      type: 'contact',
-      firstName: d.name,
-      email: d.email,
-      phone: d.phone,
-      notes: `${d.subject ? d.subject + '\n' : ''}${d.message}`,
-      utm: readUTM(),
-    });
-    setSent(true);
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      await pushToGHL({
+        type: 'contact',
+        firstName: d.name,
+        email: d.email,
+        phone: d.phone,
+        notes: `${d.subject ? d.subject + '\n' : ''}${d.message}`,
+        utm: readUTM(),
+      });
+      setSent(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (sent) {
     return (
-      <div className="border border-xicun-gold/40 bg-white p-12 text-center">
-        <p className="font-display text-3xl text-xicun-black">{dict.sent}</p>
+      <div className="rounded-2xl border border-xicun-gold/40 bg-white p-12 text-center shadow-sm">
+        <span className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-xicun-gold/15 text-xicun-gold">
+          <Check className="h-6 w-6" strokeWidth={2.5} />
+        </span>
+        <p className="font-display mt-5 text-3xl text-xicun-black">{dict.sent}</p>
       </div>
     );
   }
@@ -43,7 +53,7 @@ export function ContactForm({ dict }: { dict: Dict }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-xl border border-xicun-line bg-white p-8 lg:p-10"
+      className="rounded-2xl border border-xicun-line bg-white p-8 shadow-sm lg:p-10"
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <Field id="name" label={dict.name} value={d.name} onChange={(v) => setD({ ...d, name: v })} required />
@@ -55,8 +65,12 @@ export function ContactForm({ dict }: { dict: Dict }) {
         </div>
       </div>
       <div className="mt-7">
-        <Button type="submit" variant="solid" size="md" className="w-full sm:w-auto">
-          <Send className="h-3.5 w-3.5" />
+        <Button type="submit" variant="solid" size="md" className="w-full sm:w-auto" disabled={submitting}>
+          {submitting ? (
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+          ) : (
+            <Send className="h-3.5 w-3.5" />
+          )}
           {dict.submit}
         </Button>
       </div>
