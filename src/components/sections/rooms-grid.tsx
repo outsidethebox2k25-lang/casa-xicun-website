@@ -16,7 +16,6 @@ type Props = {
   lang: 'en' | 'es';
   eyebrow: string;
   title: string;
-  viewLabel: string;
   seeAllLabel: string;
   fromLabel: string;
   perNightLabel: string;
@@ -24,7 +23,7 @@ type Props = {
   copy: Record<RoomSlug, RoomCopy>;
 };
 
-export function RoomsGrid({ lang, eyebrow, title, viewLabel, seeAllLabel, perNightLabel, perBedLabel, copy }: Props) {
+export function RoomsGrid({ lang, eyebrow, title, seeAllLabel, perNightLabel, perBedLabel, copy }: Props) {
   const featured: RoomSlug[] = ['king-suite', 'boho-double', 'social-dorm'];
 
   return (

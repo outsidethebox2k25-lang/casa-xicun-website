@@ -35,7 +35,7 @@ export function SocialProof({ stat, featured, publications, testimonials }: Prop
               className="flex h-full flex-col gap-5 bg-white p-7"
             >
               <Quote className="h-6 w-6 text-xicun-gold/70" strokeWidth={1.2} />
-              <p className="flex-1 text-base leading-relaxed text-xicun-black">"{t.quote}"</p>
+              <p className="flex-1 text-base leading-relaxed text-xicun-black">&ldquo;{t.quote}&rdquo;</p>
               <div className="border-t border-xicun-line pt-4">
                 <p className="font-display text-base text-xicun-black">{t.name}</p>
                 <p className="text-[11px] uppercase tracking-editorial text-xicun-stone">

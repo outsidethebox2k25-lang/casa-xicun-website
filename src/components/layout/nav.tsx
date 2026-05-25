@@ -39,6 +39,7 @@ export function Nav({ lang, labels, langLabels, transparentOnTop = true }: Props
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- close menu on route change
     setOpen(false);
   }, [pathname]);
 

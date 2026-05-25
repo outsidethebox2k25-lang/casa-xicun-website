@@ -27,7 +27,7 @@ export function Destination({ lang, eyebrow, pullquote, items, cta }: Props) {
         <Reveal>
           <SectionEyebrow className="justify-center">{eyebrow}</SectionEyebrow>
           <p className="font-display mt-10 text-balance text-3xl leading-snug text-xicun-black md:text-5xl lg:text-6xl">
-            "{pullquote}"
+            &ldquo;{pullquote}&rdquo;
           </p>
         </Reveal>
 

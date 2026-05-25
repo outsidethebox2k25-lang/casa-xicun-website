@@ -27,7 +27,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         lang={lang as Locale}
         eyebrow={dict.rooms.sectionEyebrow}
         title={dict.rooms.sectionTitle}
-        viewLabel={dict.rooms.viewRoom}
         seeAllLabel={dict.rooms.seeAll}
         fromLabel="From"
         perNightLabel={dict.booking.perNight}

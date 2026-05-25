@@ -32,6 +32,7 @@ type Props = {
 
 type GuestState = { adults: number; children: number };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function BookingWidget({ lang, labels, variant = 'hero' }: Props) {
   const router = useRouter();
   const [openPanel, setOpenPanel] = useState<'dates' | 'guests' | 'room' | null>(null);

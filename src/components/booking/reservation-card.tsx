@@ -3,10 +3,9 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { DayPicker, type DateRange } from 'react-day-picker';
-import { differenceInCalendarDays, format } from 'date-fns';
+import { differenceInCalendarDays } from 'date-fns';
 import { es as esLocale, enUS } from 'date-fns/locale';
 import { ShieldCheck } from 'lucide-react';
-import { Button } from '@/components/primitives/button';
 import { formatMxn } from '@/lib/cn';
 
 type Labels = {

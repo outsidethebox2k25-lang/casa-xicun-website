@@ -61,6 +61,7 @@ export function BookWizard({ lang, dict }: Props) {
 
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [confirmationRef, setConfirmationRef] = useState<string>('');
   const [room, setRoom] = useState<RoomSlug>(initialRoom);
   const [range, setRange] = useState<DateRange | undefined>(
     initialCheckin && initialCheckout
@@ -73,18 +74,19 @@ export function BookWizard({ lang, dict }: Props) {
   const [extras, setExtras] = useState<string[]>([]);
   const [acceptTerms, setAcceptTerms] = useState(false);
 
+  /* eslint-disable react-hooks/set-state-in-effect -- rehydrate wizard state from sessionStorage on mount */
   useEffect(() => {
     try {
       const stored = sessionStorage.getItem('xicun_book');
-      if (stored) {
-        const s = JSON.parse(stored);
-        if (s.room) setRoom(s.room);
-        if (s.guests) setGuests(s.guests);
-        if (s.details) setDetails(s.details);
-        if (s.extras) setExtras(s.extras);
-      }
+      if (!stored) return;
+      const s = JSON.parse(stored);
+      if (s.room) setRoom(s.room);
+      if (s.guests) setGuests(s.guests);
+      if (s.details) setDetails(s.details);
+      if (s.extras) setExtras(s.extras);
     } catch { /* ignore */ }
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   useEffect(() => {
     try {
@@ -93,9 +95,7 @@ export function BookWizard({ lang, dict }: Props) {
   }, [room, guests, details, extras]);
 
   const dateLocale = lang === 'es' ? esLocale : enUS;
-  const roomMeta = rooms.find((r) => r.slug === room)!;
   const roomCopy = dict.rooms.items[room];
-  const isDorm = roomMeta.type === 'dorm';
   const nights = useMemo(() => {
     if (range?.from && range?.to) return Math.max(1, differenceInCalendarDays(range.to, range.from));
     return 0;
@@ -134,12 +134,13 @@ export function BookWizard({ lang, dict }: Props) {
       notes: details.notes,
       utm: readUTM(),
     });
+    setConfirmationRef(`XCN-${Date.now().toString(36).toUpperCase().slice(-6)}`);
     setSubmitted(true);
     try { sessionStorage.removeItem('xicun_book'); } catch { /* ignore */ }
   };
 
   if (submitted) {
-    const ref = `XCN-${Date.now().toString(36).toUpperCase().slice(-6)}`;
+    const ref = confirmationRef;
     return (
       <div className="border border-xicun-gold/40 bg-white p-10 lg:p-16">
         <Check className="h-12 w-12 text-xicun-gold" strokeWidth={1.2} />

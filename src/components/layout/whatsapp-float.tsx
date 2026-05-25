@@ -12,7 +12,10 @@ type Props = {
 
 export function WhatsAppFloat({ phone, message }: Props) {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- SSR-safety: avoid render until mounted client-side
+    setMounted(true);
+  }, []);
   if (!mounted) return null;
 
   return (
