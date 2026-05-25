@@ -28,7 +28,7 @@ export function RoomsGrid({ lang, eyebrow, title, viewLabel, seeAllLabel, perNig
   const featured: RoomSlug[] = ['king-suite', 'boho-double', 'social-dorm'];
 
   return (
-    <section className="relative bg-xicun-cream px-5 py-28 lg:px-8 lg:py-36">
+    <section className="relative bg-xicun-cream px-5 py-16 sm:py-20 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionEyebrow>{eyebrow}</SectionEyebrow>

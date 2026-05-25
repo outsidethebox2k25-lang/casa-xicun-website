@@ -23,7 +23,7 @@ export function AudienceMirror({ eyebrow, title, items }: Props) {
           </h2>
         </Reveal>
 
-        <Stagger delay={0.1} className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger delay={0.1} className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
           {items.map((item, i) => (
             <StaggerItem key={item.label} variants={fadeUp} className="group">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-sm transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-xl">

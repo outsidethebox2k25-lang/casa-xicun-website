@@ -17,7 +17,7 @@ type Props = {
 
 export function Destination({ lang, eyebrow, pullquote, items, cta }: Props) {
   return (
-    <section className="relative isolate overflow-hidden bg-xicun-cream px-5 py-32 lg:px-8 lg:py-40">
+    <section className="relative isolate overflow-hidden bg-xicun-cream px-5 py-20 sm:py-24 lg:px-8 lg:py-36">
       <div className="absolute inset-0 -z-10 opacity-25">
         <Image src={destinationImage} alt="" fill sizes="100vw" className="object-cover editorial-img" />
         <span className="absolute inset-0 bg-gradient-to-b from-xicun-cream via-xicun-cream/85 to-xicun-cream" />

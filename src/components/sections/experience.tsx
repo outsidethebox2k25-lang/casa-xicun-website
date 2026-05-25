@@ -18,7 +18,7 @@ type Props = {
 
 export function ExperienceSection({ lang, eyebrow, title, intro, items, cta }: Props) {
   return (
-    <section className="relative bg-white px-5 py-28 lg:px-8 lg:py-36">
+    <section className="relative bg-white px-5 py-16 sm:py-20 lg:px-8 lg:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-6">
           <div className="relative aspect-[4/5] overflow-hidden">

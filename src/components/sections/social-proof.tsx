@@ -14,7 +14,7 @@ type Props = {
 
 export function SocialProof({ stat, featured, publications, testimonials }: Props) {
   return (
-    <section className="border-y border-xicun-line bg-white px-5 py-28 lg:px-8 lg:py-32">
+    <section className="border-y border-xicun-line bg-white px-5 py-16 sm:py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-col items-center gap-4 text-center">

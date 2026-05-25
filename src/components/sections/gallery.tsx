@@ -29,7 +29,7 @@ const layout: { idx: number; col?: string; row?: string }[] = [
 
 export function Gallery({ eyebrow, title, subtitle }: Props) {
   return (
-    <section className="bg-xicun-cream px-5 py-28 lg:px-8 lg:py-36">
+    <section className="bg-xicun-cream px-5 py-16 sm:py-20 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionEyebrow>{eyebrow}</SectionEyebrow>
@@ -41,7 +41,7 @@ export function Gallery({ eyebrow, title, subtitle }: Props) {
 
         <Stagger
           delay={0.06}
-          className="mt-14 grid auto-rows-[220px] grid-cols-2 gap-3 md:auto-rows-[260px] md:grid-cols-4"
+          className="mt-10 grid auto-rows-[160px] grid-cols-2 gap-2 sm:mt-14 sm:auto-rows-[220px] sm:gap-3 md:auto-rows-[260px] md:grid-cols-4 lg:auto-rows-[300px]"
         >
           {layout
             .filter((tile) => tile.idx < galleryPhotos.length)
