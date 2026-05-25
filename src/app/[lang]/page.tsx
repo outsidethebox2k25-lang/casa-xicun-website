@@ -9,7 +9,9 @@ import { Gallery } from '@/components/sections/gallery';
 import { SocialProof } from '@/components/sections/social-proof';
 import { Destination } from '@/components/sections/destination';
 import { FinalCta } from '@/components/sections/final-cta';
+import { MobileStickyBookBar } from '@/components/layout/mobile-sticky-book-bar';
 import { JsonLd, lodgingSchema } from '@/components/seo/json-ld';
+import { rooms } from '@/lib/data';
 
 export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
@@ -72,6 +74,13 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         secondary={dict.finalCta.secondary}
         whatsappPhone={dict.topBar.phone}
         whatsappMessage={dict.whatsapp.default}
+      />
+      <MobileStickyBookBar
+        lang={lang as Locale}
+        fromPrice={Math.min(...rooms.map((r) => dict.rooms.items[r.slug].price))}
+        fromLabel={lang === 'es' ? 'Desde' : 'From'}
+        perNightLabel={dict.booking.perNight}
+        bookLabel={dict.nav.book}
       />
     </>
   );
