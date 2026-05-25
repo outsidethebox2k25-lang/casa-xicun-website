@@ -68,16 +68,16 @@ export function Hero({ lang, dict, bookingLabels }: Props) {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] uppercase tracking-editorial text-white/85 sm:mt-9 sm:gap-x-6 sm:text-xs"
+              className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-[10px] font-semibold uppercase tracking-editorial text-white/95 backdrop-blur-sm sm:mt-9 sm:gap-x-5 sm:px-5 sm:py-2.5 sm:text-[11px]"
             >
               <span className="inline-flex items-center gap-1.5">
                 <Star className="h-3 w-3 fill-xicun-gold text-xicun-gold sm:h-3.5 sm:w-3.5" strokeWidth={0} />
-                4.9 · 327 reviews
+                4.9 · 327
               </span>
-              <span className="hidden h-3 w-px bg-white/30 sm:inline-block" />
+              <span className="h-3 w-px bg-white/30" />
               <span>90 min · CDMX</span>
-              <span className="hidden h-3 w-px bg-white/30 sm:inline-block" />
-              <span>Free cancellation</span>
+              <span className="h-3 w-px bg-white/30" />
+              <span>Free cancel</span>
             </motion.div>
           </div>
         </div>
