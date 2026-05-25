@@ -12,7 +12,7 @@ export default async function ContactPage({ params }: PageProps<'/[lang]/contact
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <section className="bg-xicun-cream px-5 pt-32 pb-28 lg:px-8 lg:pt-44">
+    <section className="bg-xicun-cream px-5 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8 lg:pt-44">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <SectionEyebrow>{dict.contact.eyebrow}</SectionEyebrow>

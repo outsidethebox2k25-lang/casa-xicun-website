@@ -32,23 +32,37 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
   if (!hasLocale(lang)) return {};
   const dict = await getDictionary(lang as Locale);
   return {
-    metadataBase: new URL('https://casaxicun.mx'),
+    metadataBase: new URL('https://casa-xicun.vercel.app'),
     title: { default: dict.meta.defaultTitle, template: `%s · ${dict.meta.siteName}` },
     description: dict.meta.defaultDescription,
     icons: { icon: '/images/logo.png' },
-    alternates: {
-      languages: { en: '/en', es: '/es' },
-    },
+    alternates: { languages: { en: '/en', es: '/es' } },
     openGraph: {
       title: dict.meta.defaultTitle,
       description: dict.meta.defaultDescription,
-      images: ['/images/hero.jpg'],
+      images: ['/images/tepozteco-hero.jpg'],
       locale: lang === 'es' ? 'es_MX' : 'en_US',
       type: 'website',
       siteName: dict.meta.siteName,
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: dict.meta.defaultTitle,
+      description: dict.meta.defaultDescription,
+      images: ['/images/tepozteco-hero.jpg'],
+    },
   };
 }
+
+export const viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fbf7ec' },
+    { media: '(prefers-color-scheme: dark)', color: '#14110d' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover' as const,
+};
 
 export default async function RootLayout({ children, params }: LayoutProps<'/[lang]'>) {
   const { lang } = await params;
@@ -62,6 +76,9 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
       className={`${playfair.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full bg-xicun-cream text-xicun-black">
+        <a href="#main" className="skip-link">
+          {lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}
+        </a>
         <UTMCapture />
         <TopBar
           lang={lang as Locale}
@@ -74,7 +91,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
           labels={dict.nav}
           langLabels={{ en: dict.lang.en, es: dict.lang.es }}
         />
-        <main className="pt-0">{children}</main>
+        <main id="main" className="pt-0">{children}</main>
         <Footer
           lang={lang as Locale}
           tagline={dict.footer.tagline}

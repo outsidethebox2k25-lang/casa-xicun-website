@@ -27,7 +27,7 @@ export function Hero({ lang, dict, bookingLabels }: Props) {
         <div className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
       </div>
 
-      <div className="mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pt-32 pb-44 lg:px-8 lg:pt-44 lg:pb-32">
+      <div className="mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pt-28 pb-48 sm:pt-32 sm:pb-44 lg:px-8 lg:pt-44 lg:pb-32">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -45,7 +45,7 @@ export function Hero({ lang, dict, bookingLabels }: Props) {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
-            className="font-display mt-6 text-balance text-5xl font-medium leading-[1.02] tracking-tight text-white md:text-7xl lg:text-[5.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]"
+            className="font-display mt-6 text-balance text-[2.75rem] sm:text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]"
           >
             {dict.title}
           </motion.h1>

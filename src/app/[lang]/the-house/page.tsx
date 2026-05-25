@@ -12,7 +12,7 @@ export default async function HousePage({ params }: PageProps<'/[lang]/the-house
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <section className="bg-xicun-cream pt-32 pb-28 lg:pt-44">
+    <section className="bg-xicun-cream pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-44">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
           <SectionEyebrow>{dict.house.eyebrow}</SectionEyebrow>

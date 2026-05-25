@@ -9,7 +9,7 @@ export default async function BookPage({ params }: PageProps<'/[lang]/book'>) {
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <section className="bg-xicun-cream px-5 pt-32 pb-28 lg:px-8 lg:pt-40">
+    <section className="bg-xicun-cream px-5 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8 lg:pt-40">
       <div className="mx-auto max-w-5xl">
         <Suspense fallback={<div className="h-96 animate-pulse rounded-2xl bg-white/70" />}>
           <BookWizard

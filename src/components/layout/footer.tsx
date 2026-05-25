@@ -52,9 +52,9 @@ export function Footer({
 
   return (
     <footer className="border-t border-xicun-line bg-xicun-charcoal">
-      <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:py-20 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12 lg:grid-cols-12">
+          <div className="sm:col-span-3 lg:col-span-4">
             <Link href={`/${lang}`} className="inline-flex items-center gap-3">
               <span className="relative h-10 w-12 overflow-hidden">
                 <Image src="/images/logo-alt.png" alt="Casa Xicun" fill sizes="48px" className="object-contain" />

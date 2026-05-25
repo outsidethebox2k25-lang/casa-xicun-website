@@ -22,10 +22,19 @@ html {
   color: var(--color-xicun-black);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
   text-rendering: optimizeLegibility;
+  scroll-padding-top: 96px;
 }
 
-body { line-height: 1.7; }
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+@media (min-width: 640px) {
+  body { line-height: 1.7; }
+}
 
 ::selection {
   background: var(--color-xicun-gold);
@@ -59,12 +68,49 @@ body { line-height: 1.7; }
   opacity: 0.4;
 }
 
-/* Invert the white-on-black logo PNG to render as black-on-light. */
-.logo-light { filter: invert(1) brightness(0.9); }
+/* Accessible focus rings — keyboard users see them, mouse users don't */
+:focus-visible {
+  outline: 2px solid var(--color-xicun-gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Touch-friendly tap targets on mobile (minimum 44px hit area) */
+@media (max-width: 640px) {
+  button,
+  a[role="button"],
+  [type="button"],
+  [type="submit"] {
+    min-height: 44px;
+  }
+}
+
+/* Smoother momentum scroll on iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Skip-to-content link visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-xicun-black);
+  color: var(--color-xicun-cream);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 1rem;
+}
 
 /* react-day-picker overrides (light theme) */
 .rdp {
-  --rdp-cell-size: 40px;
+  --rdp-cell-size: 38px;
   --rdp-accent-color: var(--color-xicun-gold);
   --rdp-background-color: var(--color-xicun-cream);
   color: var(--color-xicun-black);

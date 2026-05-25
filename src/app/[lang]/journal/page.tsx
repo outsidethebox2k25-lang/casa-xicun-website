@@ -13,7 +13,7 @@ export default async function JournalPage({ params }: PageProps<'/[lang]/journal
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <section className="bg-xicun-cream px-5 pt-32 pb-28 lg:px-8 lg:pt-44">
+    <section className="bg-xicun-cream px-5 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8 lg:pt-44">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionEyebrow>{dict.journal.eyebrow}</SectionEyebrow>
