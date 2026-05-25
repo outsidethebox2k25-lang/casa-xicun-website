@@ -76,7 +76,11 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       />
       <MobileStickyBookBar
         lang={lang as Locale}
-        fromPrice={Math.min(...rooms.map((r) => dict.rooms.items[r.slug].price))}
+        fromPrice={Math.min(
+          ...rooms
+            .filter((r) => r.type === 'private')
+            .map((r) => dict.rooms.items[r.slug].price),
+        )}
         fromLabel={lang === 'es' ? 'Desde' : 'From'}
         perNightLabel={dict.booking.perNight}
         bookLabel={dict.nav.book}
