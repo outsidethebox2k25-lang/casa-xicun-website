@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, fadeUp } from '@/components/primitives/reveal';
+import { shimmer } from '@/lib/blur';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { Button } from '@/components/primitives/button';
 import { rooms, type RoomSlug } from '@/lib/data';
@@ -54,6 +55,8 @@ export function RoomsGrid({ lang, eyebrow, title, viewLabel, seeAllLabel, perNig
                       alt={c.name}
                       fill
                       sizes="(min-width: 1024px) 33vw, 100vw"
+                      placeholder="blur"
+                      blurDataURL={shimmer(800, 1000)}
                       className="object-cover editorial-img transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                     />
                   </div>

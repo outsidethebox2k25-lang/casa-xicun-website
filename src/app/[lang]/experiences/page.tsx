@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,6 +8,13 @@ import { Reveal, Stagger, StaggerItem, fadeUp } from '@/components/primitives/re
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { formatMxn } from '@/lib/cn';
 import { galleryPhotos } from '@/lib/data';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/experiences'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return { title: dict.experiencesPage.title, description: dict.experiencesPage.subtitle };
+}
 
 export default async function ExperiencesPage({ params }: PageProps<'/[lang]/experiences'>) {
   const { lang } = await params;

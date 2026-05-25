@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,6 +7,13 @@ import { getDictionary, hasLocale, type Locale } from '../dictionaries';
 import { Reveal, Stagger, StaggerItem, fadeUp } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { galleryPhotos } from '@/lib/data';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/journal'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return { title: dict.journal.title, description: dict.journal.subtitle };
+}
 
 export default async function JournalPage({ params }: PageProps<'/[lang]/journal'>) {
   const { lang } = await params;

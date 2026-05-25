@@ -9,6 +9,7 @@ import { Gallery } from '@/components/sections/gallery';
 import { SocialProof } from '@/components/sections/social-proof';
 import { Destination } from '@/components/sections/destination';
 import { FinalCta } from '@/components/sections/final-cta';
+import { JsonLd, lodgingSchema } from '@/components/seo/json-ld';
 
 export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
@@ -17,6 +18,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
   return (
     <>
+      <JsonLd data={lodgingSchema(lang as Locale)} />
       <Hero lang={lang as Locale} dict={dict.hero} bookingLabels={dict.booking} />
       <ValueBar items={dict.valueBar.items} />
       <RoomsGrid

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,10 +8,31 @@ import { rooms, type RoomSlug } from '@/lib/data';
 import { ReservationCard } from '@/components/booking/reservation-card';
 import { Reveal } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
+import { JsonLd, roomSchema, breadcrumbSchema } from '@/components/seo/json-ld';
 
 export async function generateStaticParams() {
   const slugs = rooms.map((r) => r.slug);
   return ['en', 'es'].flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps<'/[lang]/rooms/[slug]'>): Promise<Metadata> {
+  const { lang, slug } = await params;
+  if (!hasLocale(lang)) return {};
+  const room = rooms.find((r) => r.slug === slug);
+  if (!room) return {};
+  const dict = await getDictionary(lang as Locale);
+  const c = dict.rooms.items[slug as RoomSlug];
+  return {
+    title: c.name,
+    description: c.short,
+    openGraph: {
+      title: `${c.name} · Casa Xicun`,
+      description: c.short,
+      images: [room.image],
+    },
+  };
 }
 
 export default async function RoomDetail({ params }: PageProps<'/[lang]/rooms/[slug]'>) {
@@ -24,6 +46,26 @@ export default async function RoomDetail({ params }: PageProps<'/[lang]/rooms/[s
 
   return (
     <section className="bg-xicun-cream px-5 pt-28 pb-28 lg:px-8 lg:pt-36">
+      <JsonLd
+        data={[
+          roomSchema({
+            slug,
+            name: c.name,
+            description: c.long.join(' '),
+            price: c.price,
+            maxGuests: c.maxGuests,
+            sizeM2: c.sizeM2,
+            rating: room.rating,
+            reviewCount: room.reviewCount,
+            image: room.image,
+          }),
+          breadcrumbSchema([
+            { name: 'Home', url: `/${lang}` },
+            { name: dict.rooms.sectionEyebrow, url: `/${lang}/rooms` },
+            { name: c.name, url: `/${lang}/rooms/${slug}` },
+          ]),
+        ]}
+      />
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionEyebrow>{isDorm ? dict.rooms.filters.dorm : dict.rooms.filters.private}</SectionEyebrow>

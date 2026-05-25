@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +9,19 @@ import { Reveal } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { Button } from '@/components/primitives/button';
 import { formatMxn } from '@/lib/cn';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/rooms'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return {
+    title: dict.rooms.sectionTitle,
+    description:
+      lang === 'es'
+        ? 'Habitaciones boutique en Casa Xicun, Tepoztlán. King suite, doble boho, dorm social y doble jardín.'
+        : 'Boutique rooms at Casa Xicun, Tepoztlán. King suite, boho double, social dorm and garden double.',
+  };
+}
 
 export default async function RoomsPage({ params }: PageProps<'/[lang]/rooms'>) {
   const { lang } = await params;

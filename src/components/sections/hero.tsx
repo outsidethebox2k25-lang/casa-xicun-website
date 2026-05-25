@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { BookingWidget } from '@/components/booking/booking-widget';
 import { Star } from 'lucide-react';
+import { shimmer } from '@/lib/blur';
 
 type Props = {
   lang: 'en' | 'es';
@@ -21,6 +22,8 @@ export function Hero({ lang, dict, bookingLabels }: Props) {
           fill
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={shimmer(2400, 1600)}
           className="object-cover editorial-img scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/70" />

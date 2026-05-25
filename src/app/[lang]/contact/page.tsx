@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { getDictionary, hasLocale, type Locale } from '../dictionaries';
@@ -5,6 +6,13 @@ import { Reveal } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { ContactForm } from '@/components/sections/contact-form';
 import { whatsappLink } from '@/lib/cn';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/contact'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return { title: dict.contact.title, description: dict.contact.subtitle };
+}
 
 export default async function ContactPage({ params }: PageProps<'/[lang]/contact'>) {
   const { lang } = await params;

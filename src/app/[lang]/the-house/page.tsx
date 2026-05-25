@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getDictionary, hasLocale, type Locale } from '../dictionaries';
@@ -5,6 +6,13 @@ import { Reveal } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { WeddingForm } from '@/components/sections/wedding-form';
 import { galleryPhotos } from '@/lib/data';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/the-house'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return { title: dict.house.title, description: dict.house.intro };
+}
 
 export default async function HousePage({ params }: PageProps<'/[lang]/the-house'>) {
   const { lang } = await params;

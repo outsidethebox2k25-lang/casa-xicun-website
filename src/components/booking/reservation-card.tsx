@@ -54,7 +54,7 @@ export function ReservationCard({ lang, roomSlug, pricePerNight, isDorm, labels 
   const bookHref = `/${lang}/book?room=${roomSlug}${range?.from ? `&checkin=${range.from.toISOString().split('T')[0]}` : ''}${range?.to ? `&checkout=${range.to.toISOString().split('T')[0]}` : ''}&adults=${guests.adults}&children=${guests.children}`;
 
   return (
-    <aside className="rounded-xl border border-xicun-line bg-white p-6 lg:sticky lg:top-28">
+    <aside className="rounded-2xl border border-xicun-line bg-white p-6 shadow-lg lg:sticky lg:top-28">
       <div className="flex items-baseline justify-between">
         <p className="font-display text-3xl text-xicun-black">{formatMxn(pricePerNight)}</p>
         <span className="text-xs text-xicun-stone">{isDorm ? labels.perBed : labels.perNight}</span>

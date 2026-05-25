@@ -1,7 +1,15 @@
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale, type Locale } from '../dictionaries';
 import { BookWizard } from '@/components/booking/book-wizard';
+
+export async function generateMetadata({ params }: PageProps<'/[lang]/book'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return { title: dict.book.title };
+}
 
 export default async function BookPage({ params }: PageProps<'/[lang]/book'>) {
   const { lang } = await params;

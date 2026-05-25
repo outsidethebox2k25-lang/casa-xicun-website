@@ -108,18 +108,18 @@ export function Footer({
             {sent ? (
               <p className="text-sm text-xicun-gold">{newsletter.thanks}</p>
             ) : (
-              <div className="flex items-center border border-xicun-gold/60 bg-white">
+              <div className="flex flex-col items-stretch overflow-hidden rounded-full border border-xicun-gold/60 bg-white sm:flex-row">
                 <input
                   type="email"
                   required
                   placeholder={newsletter.placeholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent px-5 py-3.5 text-sm text-xicun-black placeholder-xicun-stone outline-none"
+                  className="w-full bg-transparent px-6 py-3.5 text-sm text-xicun-black placeholder-xicun-stone outline-none"
                 />
                 <button
                   type="submit"
-                  className="border-l border-xicun-gold/60 bg-xicun-gold px-6 py-3.5 text-[11px] font-medium uppercase tracking-widest-x text-xicun-black transition-colors hover:bg-xicun-gold-hov"
+                  className="bg-xicun-gold px-6 py-3.5 text-[11px] font-semibold uppercase tracking-widest-x text-white transition-colors hover:bg-xicun-gold-hov"
                 >
                   {newsletter.cta}
                 </button>

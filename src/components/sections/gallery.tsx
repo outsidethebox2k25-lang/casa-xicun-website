@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Reveal, Stagger, StaggerItem, fadeUp } from '@/components/primitives/reveal';
 import { SectionEyebrow } from '@/components/primitives/hairline';
 import { galleryPhotos } from '@/lib/data';
+import { shimmer } from '@/lib/blur';
 
 type Props = {
   eyebrow: string;
@@ -61,6 +62,8 @@ export function Gallery({ eyebrow, title, subtitle }: Props) {
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
+                  placeholder="blur"
+                  blurDataURL={shimmer(400, 400)}
                   className="object-cover editorial-img transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                 />
                 <span
