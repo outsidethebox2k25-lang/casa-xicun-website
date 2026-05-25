@@ -24,7 +24,7 @@ export default async function ContactPage({ params }: PageProps<'/[lang]/contact
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <SectionEyebrow>{dict.contact.eyebrow}</SectionEyebrow>
-          <h1 className="font-display mt-5 text-balance text-5xl tracking-tight text-xicun-black md:text-6xl">
+          <h1 className="font-display mt-5 text-balance text-4xl tracking-tight text-xicun-black sm:text-5xl md:text-6xl">
             {dict.contact.title}
           </h1>
           <p className="mt-5 max-w-md text-base text-xicun-stone">{dict.contact.subtitle}</p>

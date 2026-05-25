@@ -24,7 +24,7 @@ export default async function HousePage({ params }: PageProps<'/[lang]/the-house
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
           <SectionEyebrow>{dict.house.eyebrow}</SectionEyebrow>
-          <h1 className="font-display mt-5 max-w-4xl text-balance text-5xl tracking-tight text-xicun-black md:text-7xl">
+          <h1 className="font-display mt-5 max-w-4xl text-balance text-4xl tracking-tight text-xicun-black sm:text-5xl md:text-7xl">
             {dict.house.title}
           </h1>
           <p className="mt-7 max-w-2xl text-lg text-xicun-black/85">{dict.house.intro}</p>

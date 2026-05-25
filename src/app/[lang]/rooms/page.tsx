@@ -33,7 +33,7 @@ export default async function RoomsPage({ params }: PageProps<'/[lang]/rooms'>) 
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionEyebrow>{dict.rooms.sectionEyebrow}</SectionEyebrow>
-          <h1 className="font-display mt-5 max-w-3xl text-balance text-5xl tracking-tight text-xicun-black md:text-6xl">
+          <h1 className="font-display mt-5 max-w-3xl text-balance text-4xl tracking-tight text-xicun-black sm:text-5xl md:text-6xl">
             {dict.rooms.sectionTitle}
           </h1>
         </Reveal>

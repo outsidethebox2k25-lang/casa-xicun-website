@@ -21,7 +21,7 @@ export function ExperienceSection({ lang, eyebrow, title, intro, items, cta }: P
     <section className="relative bg-white px-5 py-16 sm:py-20 lg:px-8 lg:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
               src={experienceImage}
               alt=""
