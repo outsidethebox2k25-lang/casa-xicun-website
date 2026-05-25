@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-xicun-black: #14110d;
+  --color-xicun-charcoal: #f3eedf;
+  --color-xicun-gold: #a8821f;
+  --color-xicun-gold-hov: #8c6c14;
+  --color-xicun-cream: #fbf7ec;
+  --color-xicun-stone: #6e655b;
+  --color-xicun-line: #ebe3cf;
+  --color-xicun-surface: #ffffff;
+
+  --font-display: var(--font-playfair), ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-xicun-cream);
+  color: var(--color-xicun-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+body { line-height: 1.7; }
+
+::selection {
+  background: var(--color-xicun-gold);
+  color: var(--color-xicun-cream);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+.text-balance { text-wrap: balance; }
+.tracking-editorial { letter-spacing: 0.18em; }
+.tracking-widest-x { letter-spacing: 0.22em; }
+
+.editorial-img { filter: saturate(0.92) brightness(1.02) contrast(1.02); }
+
+.hairline-gold {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--color-xicun-gold);
+}
+
+.hairline-gold-full {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--color-xicun-gold);
+  opacity: 0.4;
+}
+
+/* Invert the white-on-black logo PNG to render as black-on-light. */
+.logo-light { filter: invert(1) brightness(0.9); }
+
+/* react-day-picker overrides (light theme) */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: var(--color-xicun-gold);
+  --rdp-background-color: var(--color-xicun-cream);
+  color: var(--color-xicun-black);
+  margin: 0;
+}
+.rdp-month_caption { font-family: var(--font-display); font-size: 1rem; padding: 0 0 0.5rem; }
+.rdp-weekday { color: var(--color-xicun-stone); font-weight: 500; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em; }
+.rdp-day { border-radius: 0; }
+.rdp-day_button { border-radius: 0; transition: background 200ms, color 200ms; }
+.rdp-day:hover:not(.rdp-day_disabled) .rdp-day_button { background: rgba(184, 147, 47, 0.1); color: var(--color-xicun-gold); }
+.rdp-day_selected .rdp-day_button,
+.rdp-day_range_start .rdp-day_button,
+.rdp-day_range_end .rdp-day_button {
+  background: var(--color-xicun-gold) !important;
+  color: var(--color-xicun-cream) !important;
+}
+.rdp-day_range_middle .rdp-day_button { background: rgba(184, 147, 47, 0.18) !important; color: var(--color-xicun-black) !important; }
+.rdp-day_today:not(.rdp-day_selected) .rdp-day_button { color: var(--color-xicun-gold); font-weight: 600; }
+.rdp-button_next, .rdp-button_previous { color: var(--color-xicun-gold); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

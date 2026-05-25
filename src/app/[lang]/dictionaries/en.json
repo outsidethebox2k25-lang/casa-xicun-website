@@ -1,0 +1,448 @@
+{
+  "meta": {
+    "siteName": "Casa Xicun",
+    "tagline": "Boutique Hostel · Tepoztlán",
+    "defaultTitle": "Casa Xicun · Boutique Hostel in Tepoztlán, Mexico · Book Direct",
+    "defaultDescription": "Sleep in a Pueblo Mágico, 90 minutes from CDMX. Boho eco rooms, mezcal nights, mountain mornings. Book direct for the best rate and a welcome mezcal on us."
+  },
+  "topBar": {
+    "phone": "+52 1 777 000 0000",
+    "bestPrice": "Direct booking — best price guaranteed."
+  },
+  "nav": {
+    "rooms": "Rooms",
+    "experiences": "Experiences",
+    "house": "The House",
+    "journal": "Journal",
+    "contact": "Contact",
+    "book": "Book Now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "booking": {
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "roomType": "Room type",
+    "adults": "Adults",
+    "children": "Children",
+    "selectDates": "Select dates",
+    "any": "Any",
+    "private": "Private",
+    "dorm": "Dorm",
+    "search": "Search stays",
+    "reserve": "Reserve",
+    "fromMxn": "From {price} MXN",
+    "perNight": "/ night",
+    "perBed": "/ bed",
+    "youWontBeCharged": "You won't be charged yet.",
+    "freeCancellation": "Free cancellation up to 7 days before",
+    "bestPrice": "Best price guaranteed",
+    "directPerks": "Direct booking perks",
+    "trustRow": "Free cancellation up to 7 days · Best price guaranteed · Direct booking perks",
+    "nights": "{n} night",
+    "nightsPlural": "{n} nights",
+    "subtotal": "Subtotal",
+    "serviceFee": "Service fee",
+    "taxes": "Taxes",
+    "total": "Total",
+    "onlyLeft": "Only {n} rooms left for these dates"
+  },
+  "hero": {
+    "eyebrow": "Tepoztlán · Morelos · México",
+    "title": "Wake up in a Pueblo Mágico.",
+    "subtitle": "A boutique hostel for travelers who want more than a bed — mezcal nights, mountain mornings, and the kind of people you tell stories about for years.",
+    "scrollCue": "Scroll"
+  },
+  "valueBar": {
+    "items": [
+      "90 min from CDMX",
+      "Boho eco design",
+      "Mezcal bar & community",
+      "Best price guaranteed"
+    ]
+  },
+  "rooms": {
+    "sectionEyebrow": "Stay",
+    "sectionTitle": "Choose your stay",
+    "viewRoom": "View room",
+    "seeAll": "See all rooms",
+    "filters": {
+      "title": "Filters",
+      "priceRange": "Price range",
+      "roomType": "Room type",
+      "amenities": "Amenities",
+      "any": "Any",
+      "private": "Private",
+      "dorm": "Dorm",
+      "wifi": "Wifi",
+      "ac": "AC",
+      "mountainView": "Mountain view",
+      "privateBath": "Private bath",
+      "cowork": "Cowork-ready",
+      "apply": "Apply filters",
+      "clear": "Clear",
+      "sort": "Sort by",
+      "popular": "Most popular",
+      "priceAsc": "Lowest price",
+      "bestReviewed": "Best reviewed"
+    },
+    "totalFor": "Total for {n} nights",
+    "amenities": {
+      "wifi": "High-speed wifi",
+      "ac": "Climate control",
+      "view": "Mountain view",
+      "bath": "Private bath",
+      "cowork": "Cowork-ready desk",
+      "linens": "Premium linens",
+      "blackout": "Blackout curtains",
+      "breakfast": "Breakfast included",
+      "terrace": "Private terrace",
+      "lockers": "Personal lockers"
+    },
+    "items": {
+      "king-suite": {
+        "name": "Private King Suite",
+        "short": "Stone walls, king bed, private terrace facing the Tepozteco.",
+        "long": [
+          "The King Suite is Casa Xicun's quietest room — a private corner at the top of the property, where the only sound at night is wind moving through the pines.",
+          "A locally carved king bed sits under exposed beams. Stone walls hold the cool. A private terrace catches the morning light over the mountain.",
+          "Built for couples, anniversaries, and travelers who came to slow down."
+        ],
+        "bedConfig": "1 king bed",
+        "maxGuests": 2,
+        "sizeM2": 32,
+        "price": 2400
+      },
+      "boho-double": {
+        "name": "Boho Double",
+        "short": "Bright queen room with handwoven textiles and a mountain peek.",
+        "long": [
+          "The Boho Double is our most-photographed room — bright walls, handwoven textiles from the Saturday market, a queen bed with linen sheets.",
+          "Mountain peek from the window, a writing desk for slow mornings, and an en-suite with stone shower.",
+          "For solo travelers who want their own door, and friends sharing a queen."
+        ],
+        "bedConfig": "1 queen bed",
+        "maxGuests": 2,
+        "sizeM2": 22,
+        "price": 1600
+      },
+      "social-dorm": {
+        "name": "Social Dorm (4 beds)",
+        "short": "Custom-built bunks, blackout curtains, lockers, shared rooftop access.",
+        "long": [
+          "Not your average hostel dorm. Four custom-built bunks, each with a curtain, reading light, USB ports, and a deep locker.",
+          "Linen sheets, blackout curtains, climate control. Shared bathroom kept hotel-clean.",
+          "Mixed-gender by default. Solo travelers, digital nomads, and anyone who'd rather meet people than stare at hotel wallpaper."
+        ],
+        "bedConfig": "4 single bunks",
+        "maxGuests": 4,
+        "sizeM2": 18,
+        "price": 580
+      },
+      "garden-double": {
+        "name": "Garden Double",
+        "short": "Ground-floor double opening onto the courtyard garden.",
+        "long": [
+          "Garden Double opens straight onto our walled courtyard — fig trees, bougainvillea, the sound of the morning coffee being poured.",
+          "Queen bed, soft cream linens, an en-suite with a copper sink and stone floor.",
+          "For travelers who want to step out of bed into the green."
+        ],
+        "bedConfig": "1 queen bed",
+        "maxGuests": 2,
+        "sizeM2": 20,
+        "price": 1450
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Live it",
+    "title": "Live Tepoztlán, don't just visit it.",
+    "intro": "We don't run a tour desk. We run a small, curated list of the things our friends do here — guided by people who actually live in town.",
+    "items": [
+      { "title": "Tepozteco at sunrise", "body": "Guided hike up the pyramid trail, 5am start, back for breakfast." },
+      { "title": "Mezcal & mole nights", "body": "Saturday tastings led by a third-generation maestro mezcalero." },
+      { "title": "Temazcal ceremony", "body": "Traditional steam ritual every Saturday, capped at 8 people." },
+      { "title": "Sunday market with a local", "body": "Walk the tianguis with our friend Lupita — copal, chiles, chapulines." }
+    ],
+    "cta": "Explore experiences"
+  },
+  "audience": {
+    "eyebrow": "Built for travelers like you",
+    "title": "Find your version of Tepoztlán.",
+    "items": [
+      { "label": "The Digital Nomad", "body": "Fast wifi, cowork-friendly, coffee on tap." },
+      { "label": "The CDMX Weekender", "body": "90 minutes away, parking on-site, mezcal nights." },
+      { "label": "The Wedding Guest", "body": "Walkable to most venues, late check-out, garment care." },
+      { "label": "The Solo Traveler", "body": "Social by design, safe, mountain views from your pillow." }
+    ]
+  },
+  "social": {
+    "stat": "4.9★ · 327 reviews · 89% direct bookings",
+    "featured": "Featured in",
+    "publications": ["Condé Nast Traveler", "Travel + Leisure", "Suitcase", "El País Viajero"],
+    "testimonials": [
+      {
+        "quote": "We came for a weekend and ended up extending twice. The hosts felt like friends by the second night.",
+        "name": "Sofía R.",
+        "country": "Spain",
+        "roomType": "King Suite",
+        "date": "Feb 2026"
+      },
+      {
+        "quote": "Best wifi I've had at any hostel in Latin America. I did real work and still made the sunset hike every day.",
+        "name": "Daniel K.",
+        "country": "Germany",
+        "roomType": "Social Dorm",
+        "date": "Jan 2026"
+      },
+      {
+        "quote": "Booked direct, paid less than Booking.com, and got a welcome mezcal. Everything just works.",
+        "name": "María L.",
+        "country": "Mexico",
+        "roomType": "Boho Double",
+        "date": "Mar 2026"
+      }
+    ]
+  },
+  "destination": {
+    "eyebrow": "Why Tepoztlán?",
+    "title": "Why Tepoztlán?",
+    "pullquote": "There's a reason the Aztecs built a temple on top of this mountain. You'll feel it the moment you arrive.",
+    "items": [
+      { "label": "The Mountain", "body": "Hike Tepozteco at dawn — 90 minutes up, the whole valley below." },
+      { "label": "The Market", "body": "Sundays smell like copal and chiles. Bring cash and an empty bag." },
+      { "label": "The Night", "body": "Mezcalerías, live music, and stars you forgot existed." }
+    ],
+    "cta": "Read the Tepoztlán guide"
+  },
+  "gallery": {
+    "eyebrow": "Inside the house",
+    "title": "The mood, the rooms, the mountain.",
+    "subtitle": "Photographs from around Casa Xicun — and the valley you'll wake up in."
+  },
+  "finalCta": {
+    "eyebrow": "Ready?",
+    "title": "Your bed is waiting.",
+    "subtitle": "Book direct, pay less, and get a welcome mezcal on us.",
+    "primary": "Check availability",
+    "secondary": "Chat on WhatsApp"
+  },
+  "footer": {
+    "tagline": "A boutique hostel in Tepoztlán, Morelos. Built by travelers, for travelers.",
+    "address": "Calle del Tepozteco, Tepoztlán, Morelos, México",
+    "columns": {
+      "stay": "Stay",
+      "discover": "Discover",
+      "connect": "Connect"
+    },
+    "stay": ["Rooms", "Experiences", "Rates", "Group bookings", "Wedding stays"],
+    "discover": ["The house", "Journal", "Tepoztlán guide", "FAQ", "Press"],
+    "connect": ["WhatsApp", "Email", "Instagram", "Newsletter"],
+    "newsletter": {
+      "title": "Letters from the mountain",
+      "body": "One short note a month — what's blooming, what's pouring, where to eat.",
+      "placeholder": "Your email",
+      "cta": "Subscribe",
+      "thanks": "Thanks. Watch your inbox."
+    },
+    "rights": "© {year} Casa Xicun. All rights reserved.",
+    "links": ["Privacy", "Terms", "Cancellation policy"]
+  },
+  "experiencesPage": {
+    "eyebrow": "Experiences",
+    "title": "Hand-picked. Always optional.",
+    "subtitle": "Stay with us and these are yours to add. Skip them and we won't think any less of you.",
+    "items": [
+      {
+        "slug": "tepozteco-sunrise",
+        "title": "Tepozteco at sunrise",
+        "summary": "A 5am start, 90 minutes up the pyramid trail with a local guide.",
+        "price": 600,
+        "duration": "3 hours"
+      },
+      {
+        "slug": "mezcal-mole",
+        "title": "Mezcal & mole night",
+        "summary": "Tasting flight of six mezcales with three regional moles. Saturdays only.",
+        "price": 800,
+        "duration": "2.5 hours"
+      },
+      {
+        "slug": "temazcal",
+        "title": "Temazcal ceremony",
+        "summary": "Traditional steam ritual with a local curandera. Capped at 8 guests.",
+        "price": 800,
+        "duration": "2 hours"
+      },
+      {
+        "slug": "sunday-market",
+        "title": "Sunday market with Lupita",
+        "summary": "Two hours through the tianguis with our friend who has shopped it for 40 years.",
+        "price": 500,
+        "duration": "2 hours"
+      },
+      {
+        "slug": "airport-pickup",
+        "title": "CDMX / airport pickup",
+        "summary": "Door-to-door from Mexico City or MEX/TLC airports in a comfortable van.",
+        "price": 1800,
+        "duration": "90 min"
+      },
+      {
+        "slug": "private-yoga",
+        "title": "Private rooftop yoga",
+        "summary": "One-on-one or duet practice on our rooftop with the mountain in front of you.",
+        "price": 1200,
+        "duration": "75 min"
+      }
+    ]
+  },
+  "house": {
+    "eyebrow": "The House",
+    "title": "A small house with a long story.",
+    "intro": "Casa Xicun is an old Tepozteco family home, restored room by room over three years. The bones are 19th-century stone; everything you touch was made by someone we know.",
+    "story": [
+      {
+        "heading": "The build",
+        "body": "We worked with local masons, carpenters from Amatlán, and a third-generation tile maker from Cuentepec. Nothing was shipped from a catalog."
+      },
+      {
+        "heading": "The land",
+        "body": "Walking distance to the market, the mezcalerías, and the trailhead. Fifteen minutes by car to Tepozteco's base camp."
+      },
+      {
+        "heading": "Wedding & group stays",
+        "body": "We host one wedding party a month — full buyout, late check-out, a cooked breakfast for everyone. Ask us."
+      }
+    ],
+    "weddingForm": {
+      "title": "Planning a wedding or group stay?",
+      "subtitle": "Tell us a little about the trip and we'll get back to you within the day.",
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone (with country code)",
+      "guests": "Approx. # of guests",
+      "dates": "Approx. dates",
+      "notes": "Anything we should know",
+      "submit": "Send inquiry",
+      "sent": "Sent. Talk soon."
+    }
+  },
+  "journal": {
+    "eyebrow": "Journal",
+    "title": "Notes from the valley.",
+    "subtitle": "Short field guides, written by people who actually live here.",
+    "readMore": "Read",
+    "posts": [
+      {
+        "slug": "tepoztlan-in-48-hours",
+        "title": "Tepoztlán in 48 hours",
+        "excerpt": "The exact itinerary we send our friends. Two breakfasts, one hike, three mezcalerías.",
+        "category": "Guide",
+        "readTime": "6 min",
+        "date": "Mar 2026"
+      },
+      {
+        "slug": "the-best-mezcal-in-town",
+        "title": "Where to drink mezcal in Tepoztlán",
+        "excerpt": "Five bars, ranked by the maestro pouring behind the counter.",
+        "category": "Food & drink",
+        "readTime": "4 min",
+        "date": "Feb 2026"
+      },
+      {
+        "slug": "sunday-market-survival",
+        "title": "Sunday market: a survival guide",
+        "excerpt": "What to buy, what to eat standing up, and the one stall you can't miss.",
+        "category": "Guide",
+        "readTime": "5 min",
+        "date": "Jan 2026"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us what you need.",
+    "subtitle": "We answer every message — usually within a few hours.",
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "sent": "Got it. We'll be in touch."
+    },
+    "info": {
+      "phoneLabel": "Phone",
+      "phoneValue": "+52 1 777 000 0000",
+      "emailLabel": "Email",
+      "emailValue": "hola@casaxicun.mx",
+      "addressLabel": "Find us",
+      "addressValue": "Tepoztlán, Morelos, México",
+      "whatsappLabel": "Chat on WhatsApp"
+    }
+  },
+  "book": {
+    "title": "Book your stay",
+    "step": "Step {n} of 4",
+    "next": "Continue",
+    "back": "Back",
+    "confirm": "Confirm booking",
+    "steps": {
+      "stay": "Your stay",
+      "details": "Your details",
+      "extras": "Add experiences",
+      "review": "Review & pay"
+    },
+    "stay": {
+      "title": "Your stay",
+      "dates": "Dates",
+      "guests": "Guests",
+      "room": "Room",
+      "editDates": "Edit dates"
+    },
+    "details": {
+      "title": "Your details",
+      "first": "First name",
+      "last": "Last name",
+      "email": "Email",
+      "phone": "Phone (with country code)",
+      "arrival": "Arrival time (optional)",
+      "notes": "Special requests"
+    },
+    "extras": {
+      "title": "Add experiences (optional)",
+      "subtitle": "All optional. Skip and you can add them after check-in too.",
+      "addedSuffix": "added"
+    },
+    "review": {
+      "title": "Review & pay",
+      "summary": "Stay summary",
+      "extrasSelected": "Selected experiences",
+      "noExtras": "No experiences selected",
+      "payment": "Payment",
+      "paymentNote": "We use Stripe for secure payment. You won't be charged until we confirm availability.",
+      "terms": "I agree to the cancellation policy and house rules.",
+      "secureCheckout": "Secure checkout · SSL encrypted"
+    },
+    "success": {
+      "title": "Reservation requested.",
+      "subtitle": "Check your inbox — we usually confirm within an hour. In the meantime:",
+      "addCal": "Add to calendar",
+      "whatsapp": "Message your host",
+      "back": "Back to home"
+    }
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español"
+  },
+  "whatsapp": {
+    "default": "Hello Casa Xicun, I'd like more information.",
+    "room": "Hi — I'm interested in the {room} from {checkin} to {checkout}.",
+    "wedding": "Hi, I'm coming to a wedding in Tepoztlán and need a stay for {guests} people."
+  }
+}

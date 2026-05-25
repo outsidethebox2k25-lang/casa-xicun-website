@@ -1,0 +1,448 @@
+{
+  "meta": {
+    "siteName": "Casa Xicun",
+    "tagline": "Hostal Boutique · Tepoztlán",
+    "defaultTitle": "Casa Xicun · Hostal Boutique en Tepoztlán, México · Reserva Directa",
+    "defaultDescription": "Duerme en un Pueblo Mágico, a 90 minutos de CDMX. Habitaciones boho eco, noches de mezcal, mañanas de montaña. Reserva directo: mejor precio y un mezcal de bienvenida."
+  },
+  "topBar": {
+    "phone": "+52 1 777 000 0000",
+    "bestPrice": "Reserva directa — mejor precio garantizado."
+  },
+  "nav": {
+    "rooms": "Habitaciones",
+    "experiences": "Experiencias",
+    "house": "La Casa",
+    "journal": "Diario",
+    "contact": "Contacto",
+    "book": "Reservar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "booking": {
+    "checkin": "Llegada",
+    "checkout": "Salida",
+    "guests": "Huéspedes",
+    "roomType": "Tipo de habitación",
+    "adults": "Adultos",
+    "children": "Niños",
+    "selectDates": "Selecciona fechas",
+    "any": "Cualquiera",
+    "private": "Privada",
+    "dorm": "Dormitorio",
+    "search": "Buscar estancias",
+    "reserve": "Reservar",
+    "fromMxn": "Desde {price} MXN",
+    "perNight": "/ noche",
+    "perBed": "/ cama",
+    "youWontBeCharged": "Aún no se hará ningún cargo.",
+    "freeCancellation": "Cancelación gratis hasta 7 días antes",
+    "bestPrice": "Mejor precio garantizado",
+    "directPerks": "Beneficios por reservar directo",
+    "trustRow": "Cancelación gratis hasta 7 días · Mejor precio garantizado · Beneficios por reserva directa",
+    "nights": "{n} noche",
+    "nightsPlural": "{n} noches",
+    "subtotal": "Subtotal",
+    "serviceFee": "Cargo por servicio",
+    "taxes": "Impuestos",
+    "total": "Total",
+    "onlyLeft": "Solo quedan {n} habitaciones para estas fechas"
+  },
+  "hero": {
+    "eyebrow": "Tepoztlán · Morelos · México",
+    "title": "Despierta en un Pueblo Mágico.",
+    "subtitle": "Un hostal boutique para viajeros que buscan más que una cama — noches de mezcal, mañanas de montaña, y gente con la que te llevarás historias por años.",
+    "scrollCue": "Scroll"
+  },
+  "valueBar": {
+    "items": [
+      "90 min desde CDMX",
+      "Diseño boho eco",
+      "Mezcalería & comunidad",
+      "Mejor precio garantizado"
+    ]
+  },
+  "rooms": {
+    "sectionEyebrow": "Hospedaje",
+    "sectionTitle": "Elige tu estancia",
+    "viewRoom": "Ver habitación",
+    "seeAll": "Ver todas las habitaciones",
+    "filters": {
+      "title": "Filtros",
+      "priceRange": "Rango de precio",
+      "roomType": "Tipo de habitación",
+      "amenities": "Amenidades",
+      "any": "Cualquiera",
+      "private": "Privada",
+      "dorm": "Dormitorio",
+      "wifi": "Wifi",
+      "ac": "Clima",
+      "mountainView": "Vista a la montaña",
+      "privateBath": "Baño privado",
+      "cowork": "Listo para trabajar",
+      "apply": "Aplicar filtros",
+      "clear": "Limpiar",
+      "sort": "Ordenar por",
+      "popular": "Más populares",
+      "priceAsc": "Menor precio",
+      "bestReviewed": "Mejor calificadas"
+    },
+    "totalFor": "Total por {n} noches",
+    "amenities": {
+      "wifi": "Wifi de alta velocidad",
+      "ac": "Clima controlado",
+      "view": "Vista a la montaña",
+      "bath": "Baño privado",
+      "cowork": "Escritorio para trabajar",
+      "linens": "Sábanas premium",
+      "blackout": "Cortinas blackout",
+      "breakfast": "Desayuno incluido",
+      "terrace": "Terraza privada",
+      "lockers": "Lockers personales"
+    },
+    "items": {
+      "king-suite": {
+        "name": "King Suite Privada",
+        "short": "Muros de piedra, cama king, terraza privada frente al Tepozteco.",
+        "long": [
+          "La King Suite es la habitación más callada de Casa Xicun — un rincón privado en la parte alta de la propiedad, donde de noche solo se oye el viento entre los pinos.",
+          "Cama king tallada por carpinteros locales, vigas a la vista, muros de piedra que mantienen la frescura. Terraza privada que recibe la luz de la mañana sobre la montaña.",
+          "Pensada para parejas, aniversarios y viajeros que vinieron a bajar el ritmo."
+        ],
+        "bedConfig": "1 cama king",
+        "maxGuests": 2,
+        "sizeM2": 32,
+        "price": 2400
+      },
+      "boho-double": {
+        "name": "Doble Boho",
+        "short": "Habitación queen luminosa con textiles tejidos a mano y asomo a la montaña.",
+        "long": [
+          "La Doble Boho es la habitación más fotografiada — muros claros, textiles del tianguis del sábado, cama queen con sábanas de lino.",
+          "Asomo a la montaña desde la ventana, escritorio para mañanas tranquilas, y un baño privado con regadera de piedra.",
+          "Para viajeros solos que quieren su puerta, y amigos que comparten una queen."
+        ],
+        "bedConfig": "1 cama queen",
+        "maxGuests": 2,
+        "sizeM2": 22,
+        "price": 1600
+      },
+      "social-dorm": {
+        "name": "Dorm Social (4 camas)",
+        "short": "Literas hechas a medida, cortinas blackout, lockers, terraza compartida.",
+        "long": [
+          "No es el dorm promedio. Cuatro literas a medida, cada una con cortina, lámpara de lectura, USB y un locker profundo.",
+          "Sábanas de lino, cortinas blackout, clima controlado. Baño compartido con limpieza de hotel.",
+          "Mixto por defecto. Viajeros solos, nómadas digitales y cualquiera que prefiera conocer gente a ver papel tapiz."
+        ],
+        "bedConfig": "4 literas individuales",
+        "maxGuests": 4,
+        "sizeM2": 18,
+        "price": 580
+      },
+      "garden-double": {
+        "name": "Doble Jardín",
+        "short": "Doble en planta baja que abre al patio jardín.",
+        "long": [
+          "La Doble Jardín abre directo al patio amurallado — higueras, bugambilias y el sonido del café de la mañana.",
+          "Cama queen, lino crema, baño con lavabo de cobre y piso de piedra.",
+          "Para viajeros que quieren salir de la cama directo al verde."
+        ],
+        "bedConfig": "1 cama queen",
+        "maxGuests": 2,
+        "sizeM2": 20,
+        "price": 1450
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Vívelo",
+    "title": "Vive Tepoztlán, no solo lo visites.",
+    "intro": "No tenemos counter de tours. Tenemos una lista corta de cosas que hacen nuestros amigos aquí — guiada por gente que vive en el pueblo.",
+    "items": [
+      { "title": "Tepozteco al amanecer", "body": "Caminata guiada por el sendero a la pirámide, salida 5am, regreso para desayunar." },
+      { "title": "Noches de mezcal & mole", "body": "Catas los sábados con un maestro mezcalero de tercera generación." },
+      { "title": "Ceremonia de temazcal", "body": "Ritual tradicional de vapor cada sábado, máximo 8 personas." },
+      { "title": "Tianguis del domingo con local", "body": "Camina el mercado con nuestra amiga Lupita — copal, chiles, chapulines." }
+    ],
+    "cta": "Explorar experiencias"
+  },
+  "audience": {
+    "eyebrow": "Para viajeros como tú",
+    "title": "Encuentra tu versión de Tepoztlán.",
+    "items": [
+      { "label": "El Nómada Digital", "body": "Wifi rápido, espacios para trabajar, café siempre listo." },
+      { "label": "El Fin de Semana desde CDMX", "body": "A 90 minutos, estacionamiento y noches de mezcal." },
+      { "label": "El Invitado a la Boda", "body": "Caminable a la mayoría de venues, salida tardía, cuidado de prendas." },
+      { "label": "El Viajero Solo", "body": "Social por diseño, seguro, vista a la montaña desde la almohada." }
+    ]
+  },
+  "social": {
+    "stat": "4.9★ · 327 reseñas · 89% reservas directas",
+    "featured": "Mencionados en",
+    "publications": ["Condé Nast Traveler", "Travel + Leisure", "Suitcase", "El País Viajero"],
+    "testimonials": [
+      {
+        "quote": "Vinimos por un fin de semana y extendimos dos veces. Los anfitriones se sentían amigos desde la segunda noche.",
+        "name": "Sofía R.",
+        "country": "España",
+        "roomType": "King Suite",
+        "date": "Feb 2026"
+      },
+      {
+        "quote": "El mejor wifi que he tenido en cualquier hostal de Latam. Trabajé en serio y aún así alcancé el atardecer en la montaña.",
+        "name": "Daniel K.",
+        "country": "Alemania",
+        "roomType": "Dorm Social",
+        "date": "Ene 2026"
+      },
+      {
+        "quote": "Reservé directo, pagué menos que en Booking, y me llegó el mezcal de bienvenida. Todo funciona.",
+        "name": "María L.",
+        "country": "México",
+        "roomType": "Doble Boho",
+        "date": "Mar 2026"
+      }
+    ]
+  },
+  "destination": {
+    "eyebrow": "¿Por qué Tepoztlán?",
+    "title": "¿Por qué Tepoztlán?",
+    "pullquote": "Por algo los aztecas construyeron un templo en la cima de esta montaña. Lo sientes en cuanto llegas.",
+    "items": [
+      { "label": "La Montaña", "body": "Sube al Tepozteco al amanecer — 90 minutos arriba, todo el valle a tus pies." },
+      { "label": "El Tianguis", "body": "Los domingos huelen a copal y chiles. Trae efectivo y una bolsa vacía." },
+      { "label": "La Noche", "body": "Mezcalerías, música en vivo y estrellas que se te habían olvidado." }
+    ],
+    "cta": "Lee la guía de Tepoztlán"
+  },
+  "gallery": {
+    "eyebrow": "Por dentro",
+    "title": "El ambiente, los cuartos, la montaña.",
+    "subtitle": "Fotos de Casa Xicun — y del valle donde despertarás."
+  },
+  "finalCta": {
+    "eyebrow": "¿Listo?",
+    "title": "Tu cama te espera.",
+    "subtitle": "Reserva directo, paga menos y te ponemos un mezcal de bienvenida.",
+    "primary": "Ver disponibilidad",
+    "secondary": "Chatea por WhatsApp"
+  },
+  "footer": {
+    "tagline": "Hostal boutique en Tepoztlán, Morelos. Hecho por viajeros, para viajeros.",
+    "address": "Calle del Tepozteco, Tepoztlán, Morelos, México",
+    "columns": {
+      "stay": "Hospedaje",
+      "discover": "Descubre",
+      "connect": "Conecta"
+    },
+    "stay": ["Habitaciones", "Experiencias", "Tarifas", "Grupos", "Bodas"],
+    "discover": ["La casa", "Diario", "Guía de Tepoztlán", "FAQ", "Prensa"],
+    "connect": ["WhatsApp", "Email", "Instagram", "Newsletter"],
+    "newsletter": {
+      "title": "Cartas desde la montaña",
+      "body": "Una nota corta al mes — qué florece, qué se sirve, dónde comer.",
+      "placeholder": "Tu correo",
+      "cta": "Suscribirme",
+      "thanks": "Gracias. Revisa tu inbox."
+    },
+    "rights": "© {year} Casa Xicun. Todos los derechos reservados.",
+    "links": ["Privacidad", "Términos", "Política de cancelación"]
+  },
+  "experiencesPage": {
+    "eyebrow": "Experiencias",
+    "title": "Curadas. Siempre opcionales.",
+    "subtitle": "Quédate con nosotros y son tuyas para agregar. Sáltatelas y no te lo tomamos a mal.",
+    "items": [
+      {
+        "slug": "tepozteco-sunrise",
+        "title": "Tepozteco al amanecer",
+        "summary": "Salida 5am, 90 minutos al sendero de la pirámide con guía local.",
+        "price": 600,
+        "duration": "3 horas"
+      },
+      {
+        "slug": "mezcal-mole",
+        "title": "Noche de mezcal & mole",
+        "summary": "Cata de seis mezcales con tres moles regionales. Solo sábados.",
+        "price": 800,
+        "duration": "2.5 horas"
+      },
+      {
+        "slug": "temazcal",
+        "title": "Ceremonia de temazcal",
+        "summary": "Ritual tradicional con una curandera local. Máximo 8 personas.",
+        "price": 800,
+        "duration": "2 horas"
+      },
+      {
+        "slug": "sunday-market",
+        "title": "Tianguis del domingo con Lupita",
+        "summary": "Dos horas por el tianguis con nuestra amiga, que lleva 40 años comprando ahí.",
+        "price": 500,
+        "duration": "2 horas"
+      },
+      {
+        "slug": "airport-pickup",
+        "title": "Traslado CDMX / aeropuerto",
+        "summary": "Puerta a puerta desde Ciudad de México o los aeropuertos MEX/TLC.",
+        "price": 1800,
+        "duration": "90 min"
+      },
+      {
+        "slug": "private-yoga",
+        "title": "Yoga privado en azotea",
+        "summary": "Práctica uno-a-uno o en duo en la azotea con la montaña enfrente.",
+        "price": 1200,
+        "duration": "75 min"
+      }
+    ]
+  },
+  "house": {
+    "eyebrow": "La Casa",
+    "title": "Una casa chica con una historia larga.",
+    "intro": "Casa Xicun es una vieja casa tepozteca, restaurada cuarto por cuarto durante tres años. Los cimientos son del siglo XIX; todo lo que tocas lo hizo alguien que conocemos.",
+    "story": [
+      {
+        "heading": "La obra",
+        "body": "Trabajamos con albañiles locales, carpinteros de Amatlán y una tlachiquera de tercera generación en Cuentepec. Nada vino de un catálogo."
+      },
+      {
+        "heading": "El lugar",
+        "body": "A caminata del tianguis, las mezcalerías y el sendero. Quince minutos en coche al campamento base del Tepozteco."
+      },
+      {
+        "heading": "Bodas y grupos",
+        "body": "Recibimos una boda al mes — buyout completo, salida tardía, desayuno cocinado para todos. Pregunta."
+      }
+    ],
+    "weddingForm": {
+      "title": "¿Planeas una boda o estancia grupal?",
+      "subtitle": "Cuéntanos un poco del viaje y te respondemos el mismo día.",
+      "name": "Tu nombre",
+      "email": "Correo",
+      "phone": "Teléfono (con lada internacional)",
+      "guests": "# aprox. de invitados",
+      "dates": "Fechas aprox.",
+      "notes": "Algo más que debamos saber",
+      "submit": "Enviar consulta",
+      "sent": "Enviado. Hablamos pronto."
+    }
+  },
+  "journal": {
+    "eyebrow": "Diario",
+    "title": "Notas del valle.",
+    "subtitle": "Guías de campo cortas, escritas por gente que vive aquí.",
+    "readMore": "Leer",
+    "posts": [
+      {
+        "slug": "tepoztlan-in-48-hours",
+        "title": "Tepoztlán en 48 horas",
+        "excerpt": "El itinerario exacto que les mandamos a nuestros amigos. Dos desayunos, una caminata, tres mezcalerías.",
+        "category": "Guía",
+        "readTime": "6 min",
+        "date": "Mar 2026"
+      },
+      {
+        "slug": "the-best-mezcal-in-town",
+        "title": "Dónde tomar mezcal en Tepoztlán",
+        "excerpt": "Cinco bares, rankeados por el maestro que sirve detrás de la barra.",
+        "category": "Comida y bebida",
+        "readTime": "4 min",
+        "date": "Feb 2026"
+      },
+      {
+        "slug": "sunday-market-survival",
+        "title": "Tianguis del domingo: guía de supervivencia",
+        "excerpt": "Qué comprar, qué comer parado y el puesto que no te puedes saltar.",
+        "category": "Guía",
+        "readTime": "5 min",
+        "date": "Ene 2026"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Cuéntanos qué necesitas.",
+    "subtitle": "Respondemos cada mensaje — normalmente en unas horas.",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Correo",
+      "phone": "Teléfono (opcional)",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "sent": "Recibido. Te contactamos."
+    },
+    "info": {
+      "phoneLabel": "Teléfono",
+      "phoneValue": "+52 1 777 000 0000",
+      "emailLabel": "Correo",
+      "emailValue": "hola@casaxicun.mx",
+      "addressLabel": "Encuéntranos",
+      "addressValue": "Tepoztlán, Morelos, México",
+      "whatsappLabel": "Chatea por WhatsApp"
+    }
+  },
+  "book": {
+    "title": "Reserva tu estancia",
+    "step": "Paso {n} de 4",
+    "next": "Continuar",
+    "back": "Atrás",
+    "confirm": "Confirmar reserva",
+    "steps": {
+      "stay": "Tu estancia",
+      "details": "Tus datos",
+      "extras": "Agrega experiencias",
+      "review": "Revisa y paga"
+    },
+    "stay": {
+      "title": "Tu estancia",
+      "dates": "Fechas",
+      "guests": "Huéspedes",
+      "room": "Habitación",
+      "editDates": "Editar fechas"
+    },
+    "details": {
+      "title": "Tus datos",
+      "first": "Nombre",
+      "last": "Apellido",
+      "email": "Correo",
+      "phone": "Teléfono (con lada)",
+      "arrival": "Hora de llegada (opcional)",
+      "notes": "Peticiones especiales"
+    },
+    "extras": {
+      "title": "Agrega experiencias (opcional)",
+      "subtitle": "Todas opcionales. Sáltalas y las puedes agregar al check-in.",
+      "addedSuffix": "agregada"
+    },
+    "review": {
+      "title": "Revisa y paga",
+      "summary": "Resumen de estancia",
+      "extrasSelected": "Experiencias seleccionadas",
+      "noExtras": "Sin experiencias seleccionadas",
+      "payment": "Pago",
+      "paymentNote": "Usamos Stripe para pago seguro. No te cobramos hasta confirmar disponibilidad.",
+      "terms": "Acepto la política de cancelación y las reglas de la casa.",
+      "secureCheckout": "Checkout seguro · Encriptado SSL"
+    },
+    "success": {
+      "title": "Reserva solicitada.",
+      "subtitle": "Revisa tu inbox — confirmamos en menos de una hora. Mientras tanto:",
+      "addCal": "Agregar al calendario",
+      "whatsapp": "Mensaje a tu anfitrión",
+      "back": "Volver al inicio"
+    }
+  },
+  "lang": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español"
+  },
+  "whatsapp": {
+    "default": "Hola Casa Xicun, quiero información.",
+    "room": "Hola, me interesa la {room} del {checkin} al {checkout}.",
+    "wedding": "Hola, vengo a una boda en Tepoztlán y necesito alojamiento para {guests} personas."
+  }
+}
