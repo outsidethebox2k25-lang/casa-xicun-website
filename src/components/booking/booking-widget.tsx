@@ -108,7 +108,7 @@ export function BookingWidget({ lang, labels, variant = 'hero' }: Props) {
       </div>
 
       {/* Mobile: stacked rounded card */}
-      <div className="mx-5 mb-6 overflow-hidden rounded-2xl bg-white shadow-[0_12px_40px_-8px_rgba(0,0,0,0.25)] ring-1 ring-black/5 lg:hidden">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-[0_12px_40px_-8px_rgba(0,0,0,0.25)] ring-1 ring-black/5 lg:hidden">
         <div className="flex flex-col divide-y divide-xicun-line">
           <SegmentButton
             icon={<CalendarDays className="h-4 w-4 text-xicun-gold" />}
